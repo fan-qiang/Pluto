@@ -1,0 +1,138 @@
+{"action": "F",
+  "bizNo": "cfets-fxtrade_TRADE_FXOPT_20180309_160736",
+  "bizType": "TRADE",
+  "cacheName": "cfets-fxtrade_TRADE_FXOPT",
+  "dstSystem": "calypso",
+  "extMsgID": "6.2.0435942_1520582856057",
+  "messageName": "cfets-fxtrade",
+  "msgContent": {
+    "NetGrossInd": "1",
+    "SenderCompID": "BookedCSTPFXServiceDown",
+    "NoFxOptions": [
+      {
+        "DerivativeExerciseStyle": "0",
+        "PutOrCall": "0",
+        "StrikePrice": "6.3200",
+        "Volatility": "3.2656",
+        "NoCurrencyAmt": [
+          {
+            "Currency": "CNY",
+            "CurrencyAmtType": "1",
+            "Principal": "63200000.00"
+          },
+          {
+            "Currency": "USD",
+            "CurrencyAmtType": "2",
+            "Principal": "10000000.00"
+          }
+        ],
+        "Symbol": "USD.CNY",
+        "MaturityDate": "20180316",
+        "OptPayoutType": "1",
+        "ExpireTimeZone": "Beijing",
+        "NoPremium": [
+          {
+            "DecimalPlaces": "2",
+            "OptPremiumBasis": "1",
+            "OptPremiumCurrency": "CNY",
+            "SettlDate": "20180313",
+            "OptPremiumAmt": "50000.00",
+            "DeliveryDate": "20180313",
+            "OptPremiumValue": "50.00"
+          }
+        ],
+        "Side": "1",
+        "SettlType": "1W",
+        "RiskLastQty": "10000000.00",
+        "ExpireTime": "20180316-15:00:00"
+      }
+    ],
+    "msgType": "8",
+    "ExecID": "6.2.0435942",
+    "TargetCompID": "CALYPSO_CSTPFX_TEST",
+    "INF_TYPE": "FXOPT",
+    "LastSpotRate": "6.3347",
+    "DateConfirmed": "20180309",
+    "TradeInstrument": "Q",
+    "OPTDataType": "1",
+    "TradingMode": "1",
+    "SendingTime": "20180309-08:02:00.114",
+    "BookID": "GTJAFI_FXPP_OPT_00",
+    "TradeDate": "20180309",
+    "NoPartyIDs": [
+      {
+        "PartyRole": "114",
+        "PartyID": "102010531000000205011",
+        "NoPartySubIDs": [
+          {
+            "PartySubIDType": "101",
+            "PartySubID": "syn.dealer@gtja"
+          },
+          {
+            "PartySubIDType": "102",
+            "PartySubID": "GTJA"
+          },
+          {
+            "PartySubIDType": "5",
+            "PartySubID": "guotai junan securities co.ltd"
+          },
+          {
+            "PartySubIDType": "255",
+            "PartySubID": "GTJA_0001"
+          }
+        ]
+      },
+      {
+        "PartyRole": "113",
+        "PartyID": "100000411000000101001",
+        "NoPartySubIDs": [
+          {
+            "PartySubIDType": "101",
+            "PartySubID": "chenxuejun.dealer@ccbh"
+          },
+          {
+            "PartySubIDType": "102",
+            "PartySubID": "CCBH"
+          },
+          {
+            "PartySubIDType": "5",
+            "PartySubID": "China Construction Bank Corporation"
+          },
+          {
+            "PartySubIDType": "255",
+            "PartySubID": "CCBH_0001"
+          }
+        ]
+      }
+    ],
+    "ExecType": "F",
+    "CFETSCnfmIndicator": "Y",
+    "TradeTime": "16:04:15",
+    "TradeMethod": "4",
+    "INF_NAME": "FXCSTP",
+    "TargetSubID": "cstp.settle@gtja",
+    "MsgSeqNum": "50",
+    "MarketIndicator": "19",
+    "DealTransType": "0",
+    "DerivativeExerciseStatus": "1",
+    "NoOptionExercise": [
+      {
+        "DerivativeExerciseStyle": "0",
+        "NoOptSettlAmt": [
+          {
+            "OptSettlAmtType": "1",
+            "DeliveryDate": "20180320"
+          }
+        ]
+      }
+    ],
+    "LastForwardPoints": "18.35"
+  },
+  "msgFormat": "JSON",
+  "reqType": "REQ",
+  "srcSystem": "cfets_fxcstp",
+  "subBizType": "FXOPT",
+  "timeStamp": 1520582856057,
+  "topicName": "cfets-fxtrade",
+  "version": 1
+}

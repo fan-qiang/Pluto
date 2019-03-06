@@ -1,0 +1,8 @@
+${AnsiColor.BRIGHT_GREEN}     _______.  ______   .______    __    __    ______   .__   __.    ${AnsiColor.BRIGHT_MAGENTA} _______  __  .______${AnsiColor.BLACK}
+${AnsiColor.BRIGHT_GREEN}    /       | /  __  \  |   _  \  |  |  |  |  /  __  \  |  \ |  |    ${AnsiColor.BRIGHT_MAGENTA}|   ____||  | |   _  \${AnsiColor.BLACK}
+${AnsiColor.BRIGHT_GREEN}   |   (----`|  |  |  | |  |_)  | |  |__|  | |  |  |  | |   \|  |    ${AnsiColor.BRIGHT_MAGENTA}|  |__   |  | |  |_)  |${AnsiColor.BLACK}
+${AnsiColor.BRIGHT_GREEN}    \   \    |  |  |  | |   ___/  |   __   | |  |  |  | |  . `  |    ${AnsiColor.BRIGHT_MAGENTA}|   __|  |  | |   ___/${AnsiColor.BLACK}
+${AnsiColor.BRIGHT_GREEN}.----)   |   |  `--'  | |  |      |  |  |  | |  `--'  | |  |\   |    ${AnsiColor.BRIGHT_MAGENTA}|  |____ |  | |  |${AnsiColor.BLACK}
+${AnsiColor.BRIGHT_GREEN}|_______/     \______/  | _|      |__|  |__|  \______/  |__| \__|    ${AnsiColor.BRIGHT_MAGENTA}|_______||__| | _|${AnsiColor.BLACK}
+
+::  Micro service ${AnsiColor.BRIGHT_BLUE} ${spring.application.name} (V${spring.application.version}) ${AnsiColor.BLACK} was started on ${AnsiColor.RED} ${server.port}  ::

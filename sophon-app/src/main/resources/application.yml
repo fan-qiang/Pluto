@@ -1,0 +1,141 @@
+
+# the name from Camel
+camel:
+  springboot:
+    name: Sophon
+
+spring:
+  application:
+    name: Sophon-Eip
+    version: 1.0.0
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@172.16.10.61:1521:KOPICS
+    username: KRM_SYS
+    password: KRM_SYS
+    #    url: 'jdbc:h2:file:~/db/sophon;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1;'
+#    username: dev
+#    password: dev
+    hikari:
+      minimum-idle: 5
+      auto-commit: true
+      connection-test-query: SELECT 1 from dual
+      idle-timeout: 120000
+      maximumPoolSize: 50
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+#    properties:
+#      hibernate:
+#        default_schema: public
+  activemq:
+    broker-url: 'tcp://localhost:61616'
+    user: 'admin'
+    password: 'admin'
+    in-memory: true
+    packages:
+      trust-all: true
+  data:
+    rest:
+      base-path: /api
+  h2:
+    console:
+      enabled: true
+hawtio:
+  authenticationEnabled: false
+
+server:
+  port: 9000
+# enabled all endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+camel:
+  springboot:
+    tracing: false
+    tracer:
+      useJpa: false
+      loggingLevel: 'INFO'
+    jpa:
+      join-transaction: false
+      shared-entity-manager: true
+  dataformat:
+    jaxb:
+      context-path: com.fanqiang.sophon.jaxb
+
+spdb:
+  input: /Users/qiangfan/Documents/kmerit/KRM/20190201
+  output: /Users/qiangfan/Documents/kmerit/KRM/20190201_done
+
+
+
+
+---
+spring:
+  profiles: test
+  datasource:
+    url: 'jdbc:h2:file:~/db/sophon;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1;'
+    username: dev
+    password: dev
+    hikari:
+      minimum-idle: 5
+      auto-commit: true
+      connection-test-query: SELECT 1
+      idle-timeout: 120000
+      maximumPoolSize: 50
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        default_schema: public
+  activemq:
+    broker-url: 'tcp://localhost:61616'
+    user: 'admin'
+    password: 'admin'
+    in-memory: true
+    packages:
+      trust-all: true
+  data:
+    rest:
+      base-path: /api
+  h2:
+    console:
+      enabled: true
+hawtio:
+  authenticationEnabled: false
+
+server:
+  port: 9000
+# enabled all endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+camel:
+  springboot:
+    tracing: false
+    tracer:
+      useJpa: false
+      loggingLevel: 'INFO'
+    jpa:
+      join-transaction: false
+      shared-entity-manager: true
+  dataformat:
+    jaxb:
+      context-path: com.fanqiang.sophon.jaxb
+
+spdb:
+  input: /Users/qiangfan/Documents/kmerit/KRM/20190201
+  output: /Users/qiangfan/Documents/kmerit/KRM/20190201_done

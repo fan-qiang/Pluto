@@ -1,0 +1,9 @@
+import com.alibaba.fastjson.JSONPath;
+
+result = {"abc":"eee"} ;
+
+if(messatType == 'd' && type == '10176'){
+    result['newkey'] = '12345';
+};
+
+return result;

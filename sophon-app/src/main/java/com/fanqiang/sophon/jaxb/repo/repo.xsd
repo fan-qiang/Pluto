@@ -1,0 +1,143 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="SUMMIT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="COMMON">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="MsgId"/>
+                            <xs:element type="xs:string" name="ExternalId"/>
+                            <xs:element type="xs:string" name="Type"/>
+                            <xs:element type="xs:string" name="Version"/>
+                            <xs:element type="xs:string" name="Action"/>
+                            <xs:element type="xs:string" name="Timestamp"/>
+                            <xs:element type="xs:string" name="TargetSystem"/>
+                            <xs:element type="xs:string" name="SourceSystem"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TRADEDETAIL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TRADELIST">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="REPO_TR">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="TradeType"/>
+                                                    <xs:element name="Env">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="ENV">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="TradeDate"/>
+                                                                            <xs:element type="xs:string" name="Trader"/>
+                                                                            <xs:element type="xs:string" name="Cust"/>
+                                                                            <xs:element type="xs:string" name="Company"/>
+                                                                            <xs:element type="xs:string" name="Desk"/>
+                                                                            <xs:element type="xs:string" name="Book"/>
+                                                                            <xs:element type="xs:string" name="Comment1"/>
+                                                                            <xs:element type="xs:string" name="Comment2"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:string" name="SINGLE"/>
+                                                            <xs:attribute type="xs:string" name="TYPE"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Back">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="BACK">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="ExtSystem"/>
+                                                                            <xs:element type="xs:string" name="ExtTradeId"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:string" name="SINGLE"/>
+                                                            <xs:attribute type="xs:string" name="TYPE"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Repo">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="REPO">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="RepType"/>
+                                                                            <xs:element type="xs:string" name="RepoMktType"/>
+                                                                            <xs:element type="xs:string" name="PassThru"/>
+                                                                            <xs:element type="xs:string" name="MatPassThru"/>
+                                                                            <xs:element type="xs:int" name="NumCollateral"/>
+                                                                            <xs:element name="CollList">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="COLLTRL" maxOccurs="unbounded" minOccurs="0">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element type="xs:string" name="Sec"/>
+                                                                                                    <xs:element type="xs:decimal" name="Quantity"/>
+                                                                                                    <xs:element type="xs:string" name="MarginExp"/>
+                                                                                                    <xs:element type="xs:decimal" name="Margin"/>
+                                                                                                    <xs:element type="xs:decimal" name="StartDirtyPrice"/>
+                                                                                                    <xs:element type="xs:decimal" name="EndDirtyPrice"/>
+                                                                                                    <xs:element type="xs:string" name="Type"/>
+                                                                                                    <xs:element type="xs:string" name="Ccy"/>
+                                                                                                    <xs:element type="xs:string" name="CollType"/>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                    <xs:attribute type="xs:string" name="SINGLE"/>
+                                                                                    <xs:attribute type="xs:string" name="TYPE"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:string" name="SINGLE"/>
+                                                            <xs:attribute type="xs:string" name="TYPE"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Asset">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="ASSET">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="PorS"/>
+                                                                            <xs:element type="xs:decimal" name="Notional"/>
+                                                                            <xs:element type="xs:string" name="Ccy"/>
+                                                                            <xs:element type="xs:string" name="EffDate"/>
+                                                                            <xs:element type="xs:string" name="MatDate"/>
+                                                                            <xs:element type="xs:decimal" name="INTEREST_Rate"/>
+                                                                            <xs:element type="xs:string" name="INTEREST_dmIndex"/>
+                                                                            <xs:element type="xs:string" name="INTEREST_Term"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:string" name="SINGLE"/>
+                                                            <xs:attribute type="xs:string" name="TYPE"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
